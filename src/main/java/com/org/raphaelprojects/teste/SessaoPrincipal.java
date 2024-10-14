@@ -37,7 +37,7 @@ public class SessaoPrincipal {
                      Digite uma das opções abaixo:\s
                      1 - Hortifruti
                      2 - Bomboniere
-                     3 - Alimentos
+                     3 - Alimentos1
                      0 - Dar checkout""");
 
             int OpcaoSetor = scanner.nextInt();

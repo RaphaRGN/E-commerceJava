@@ -26,10 +26,10 @@ class Fruta extends Alimentos {
 
     public Fruta (String nome, double precoKG, String descricao, LocalDate dataVencimento){
 
-        super (nome, 0, descricao, dataVencimento);
+        super (nome, precoKG, descricao, dataVencimento);
 
         this.nome = nome;
-        this.precoKG = preco;
+        this.precoKG = precoKG;
         this.descricao = descricao;
         this.dataVencimento = dataVencimento;
 
