@@ -14,4 +14,10 @@ public class CarrinhoCompras{
         return total;
     }
 
+    public double getFinal() {
+
+        return total;
+
+    }
+
 }

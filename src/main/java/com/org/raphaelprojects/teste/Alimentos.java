@@ -29,7 +29,7 @@ class Fruta extends Alimentos {
         super (nome, 0, descricao, dataVencimento);
 
         this.nome = nome;
-        this.precoKG = precoKG;
+        this.precoKG = preco;
         this.descricao = descricao;
         this.dataVencimento = dataVencimento;
 

@@ -2,12 +2,13 @@ package com.org.raphaelprojects.teste;
 
 import java.time.LocalDate;
 import java.util.Scanner;
-import com.org.raphaelprojects.teste.Bomboniere;
 
 
 public class SessaoPrincipal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
+        CarrinhoCompras carrinhoCompras = new CarrinhoCompras();
 
         /* Instancia dos produtos*/
         Chocolate marca1Chocolate = new Chocolate("Garoto", "Barra de chocolate 23g",
@@ -25,32 +26,43 @@ public class SessaoPrincipal {
                 "Fardo de iogurte Bluyo", LocalDate.of(2025,12,31));
 
         /*Instancia das seções*/
-        Bomboniere bomboniere = new Bomboniere();
-        Hortifruti hortifruti = new Hortifruti();
-        Diversos diversos = new Diversos();
+        Bomboniere bomboniere = new Bomboniere(carrinhoCompras);
+        Hortifruti hortifruti = new Hortifruti(carrinhoCompras);
+        Diversos diversos = new Diversos(carrinhoCompras);
 
-        boolean Comando = true;
-        while (Comando) {
-            System.out.println("Bem vindo ao Mercado da Velha Central ! \n Digite uma das opções abaixo:" +
-                    " \n 1 - Hortifruti \n 2 - Bomboniere  \n 3 - Alimentos");
+        boolean Continuar = true;
+        while (Continuar) {
+            System.out.println("""
+                    Bem vindo ao Mercado da Velha Central !\s
+                     Digite uma das opções abaixo:\s
+                     1 - Hortifruti
+                     2 - Bomboniere
+                     3 - Alimentos
+                     0 - Dar checkout""");
 
             int OpcaoSetor = scanner.nextInt();
+            scanner.nextLine();
 
             switch (OpcaoSetor) {
 
                 case 1:
-
                     hortifruti.getHortifruti(frutamaca);
                     break;
 
                 case 2:
-
                     bomboniere.getBomboniere(marca1Chocolate);
                     break;
 
                 case 3:
-
                     diversos.getDiversos(alimentos1);
+                    break;
+
+                case 0:
+
+                    Continuar = false;
+
+                    double total = carrinhoCompras.getFinal();
+                    System.out.println("Obrigado por comprar conosco ! seu total é: " + total);
 
             }
         }
