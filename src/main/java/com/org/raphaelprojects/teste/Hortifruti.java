@@ -25,8 +25,16 @@ public class Hortifruti {
 
             case 1:
 
-              double total = carrinhoCompras.getTotal(fruta);
+              double total = carrinhoCompras.adicionarItem(fruta);
               System.out.println("Adicionado ! seu sub total é: " + total);
+
+              break;
+
+            case 2:
+
+                System.out.println("Voltando...");
+
+                break;
 
 
         }

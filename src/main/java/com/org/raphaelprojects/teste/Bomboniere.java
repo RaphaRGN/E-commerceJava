@@ -1,7 +1,6 @@
 package com.org.raphaelprojects.teste;
 
 import java.util.Scanner;
-import  com.org.raphaelprojects.teste.CarrinhoCompras;
 
 public class Bomboniere {
     public CarrinhoCompras carrinhoCompras;
@@ -17,7 +16,7 @@ public class Bomboniere {
         System.out.println("Bem vindo a sessão Bomboniere ! Escolha uma das opções abaixo: \n 1- Ver os produtos \n 2- Voltar para sessão inicial");
 
         System.out.println("Abaixo estão os produtos desta seção:");
-        System.out.println("Nome: " + chocolate.nomeMarca + "\nDescrição: " + chocolate.descricao +
+        System.out.println("Nome: " + chocolate.marca + "\nDescrição: " + chocolate.descricao +
                 "\nPreço: " + chocolate.preco + "\nPresença Áçucar: " + Condicao);
 
         System.out.println("Gostaria de adicionar algum item ao carrinho ? \n 1- Sim \n 2- Não");
@@ -27,7 +26,7 @@ public class Bomboniere {
 
             case 1:
 
-               double total = carrinhoCompras.getTotal(chocolate);
+               double total = carrinhoCompras.adicionarItem(chocolate);
                System.out.println("Adicionado, seu total é: " + total);
                break;
 

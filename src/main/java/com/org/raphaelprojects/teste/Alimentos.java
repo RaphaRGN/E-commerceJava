@@ -27,19 +27,14 @@ class Fruta extends Alimentos {
     public Fruta (String nome, double precoKG, String descricao, LocalDate dataVencimento){
 
         super (nome, precoKG, descricao, dataVencimento);
-
-        this.nome = nome;
         this.precoKG = precoKG;
-        this.descricao = descricao;
-        this.dataVencimento = dataVencimento;
-
     }
 
 }
 
 class Chocolate extends Alimentos {
 
-    public String nomeMarca;
+    public String marca;
     public boolean presencaAcucar;
     public boolean presencaLactose;
 
@@ -47,7 +42,7 @@ class Chocolate extends Alimentos {
 
         super(nomeMarca, 0, descricao, LocalDate.of(2024, 12, 31));
 
-        this.nomeMarca = nomeMarca;
+        this.marca = nomeMarca;
         this.descricao = descricao;
         this.preco = preco;
         this.presencaLactose = presencaLactose;

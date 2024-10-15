@@ -25,8 +25,16 @@ public class Diversos {
 
             case 1:
 
-                double total = carrinhoCompras.getTotal(alimentos);
+                double total = carrinhoCompras.adicionarItem(alimentos);
                 System.out.println("Adicionado ! seu sub total é: " + total);
+
+                break;
+
+            case 2:
+
+                System.out.println("Voltando...");
+
+                break;
 
 
         }

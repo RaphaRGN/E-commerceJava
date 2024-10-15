@@ -10,7 +10,7 @@ public class SessaoPrincipal {
 
         CarrinhoCompras carrinhoCompras = new CarrinhoCompras();
 
-        /* Instancia dos produtos*/
+        /* Instância dos produtos*/
         Chocolate marca1Chocolate = new Chocolate("Garoto", "Barra de chocolate 23g",
                 23.00, true, true);
 
@@ -37,7 +37,7 @@ public class SessaoPrincipal {
                      Digite uma das opções abaixo:\s
                      1 - Hortifruti
                      2 - Bomboniere
-                     3 - Alimentos1
+                     3 - Alimentos
                      0 - Dar checkout""");
 
             int OpcaoSetor = scanner.nextInt();
@@ -61,7 +61,7 @@ public class SessaoPrincipal {
 
                     Continuar = false;
 
-                    double total = carrinhoCompras.getFinal();
+                    double total = carrinhoCompras.calcularTotalCarrinho();
                     System.out.println("Obrigado por comprar conosco ! seu total é: " + total);
 
             }
