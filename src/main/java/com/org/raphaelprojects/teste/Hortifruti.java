@@ -1,5 +1,8 @@
 package com.org.raphaelprojects.teste;
 
+import com.org.raphaelprojects.teste.CarrinhoCompras;
+import com.org.raphaelprojects.teste.Fruta;
+
 import java.util.Scanner;
 
 public class Hortifruti {
@@ -13,7 +16,7 @@ public class Hortifruti {
 
     public void getHortifruti(Fruta fruta){
         System.out.println("Abaixo estão os produtos desta seção:");
-        System.out.println("Nome: " + fruta.nome + "\nPreço no KG: " + fruta.precoKG +
+        System.out.println("Nome: " + fruta.nome + "\nPreço no KG: R$ " + fruta.precoKG +
                 "\nDescrição: " + fruta.descricao + " \nData de vencimento: " + fruta.dataVencimento);
 
         System.out.println("Gostaria de adicionar algum item ao carrinho ? \n 1- Sim \n 2- Não");
@@ -26,7 +29,7 @@ public class Hortifruti {
             case 1:
 
               double total = carrinhoCompras.adicionarItem(fruta);
-              System.out.println("Adicionado ! seu sub total é: " + total);
+              System.out.println("Adicionado ! seu sub total é: R$ " + total);
 
               break;
 
@@ -35,6 +38,11 @@ public class Hortifruti {
                 System.out.println("Voltando...");
 
                 break;
+
+            default:
+                System.out.println("Opção inválida !");
+                break;
+
 
 
         }

@@ -14,7 +14,7 @@ public class Diversos {
     public void getDiversos(Alimentos alimentos){
 
         System.out.println("Abaixo estão os produtos desta seção:");
-        System.out.println("Nome: " + alimentos.nome + "\nPreço: " + alimentos.preco +
+        System.out.println("Nome: " + alimentos.nome + "\nPreço: R$ " + alimentos.preco +
                 "\nDescrição: " + alimentos.descricao + " \nData de vencimento: " + alimentos.dataVencimento);
         System.out.println("Gostaria de adicionar algum item ao carrinho ? \n 1- Sim \n 2- Não");
 
@@ -26,7 +26,7 @@ public class Diversos {
             case 1:
 
                 double total = carrinhoCompras.adicionarItem(alimentos);
-                System.out.println("Adicionado ! seu sub total é: " + total);
+                System.out.println("Adicionado ! seu sub total é: R$ " + total);
 
                 break;
 
@@ -34,6 +34,10 @@ public class Diversos {
 
                 System.out.println("Voltando...");
 
+                break;
+
+            default:
+                System.out.println("Opção inválida !");
                 break;
 
 

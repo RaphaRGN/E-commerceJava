@@ -62,7 +62,25 @@ public class SessaoPrincipal {
                     Continuar = false;
 
                     double total = carrinhoCompras.calcularTotalCarrinho();
-                    System.out.println("Obrigado por comprar conosco ! seu total é: " + total);
+
+                    if(total == 0){
+
+                        System.out.println("Volte sempre !");
+
+                    }
+
+                    else {
+
+                        System.out.println("Obrigado por comprar conosco ! seu total é: R$ " + total);
+                    }
+                    break;
+
+
+
+                default:
+                    System.out.println("Opção inválida !");
+                    break;
+
 
             }
         }

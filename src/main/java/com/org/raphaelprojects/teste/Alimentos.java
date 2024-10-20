@@ -1,7 +1,6 @@
 package com.org.raphaelprojects.teste;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 
 public class Alimentos {
 
